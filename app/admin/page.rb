@@ -26,10 +26,10 @@ permit_params :title, :body, :order, :is_published, :section_id, :menu_display
     f.inputs "Details" do
       f.input :title, :label => 'Title'
       f.input :section, :label => 'Section'
-      f.input :body, :label => 'Body'
+      f.input :body, :as => :html_editor, :label => 'Body'
       f.input :order, :label => 'Order'
       f.input :is_published, :label => 'Published'
-      f.input :menu_display, :lable => 'Disply In Menu'
+      f.input :menu_display, :lable => 'Display In Menu'
       f.actions
     end
   end
