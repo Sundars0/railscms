@@ -3,7 +3,7 @@ ActiveAdmin.register Page do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :title, :body, :order, :is_published, :section_id, :menu_display
+permit_params :title, :body, :order, :is_published, :section_id, :menu_display, :featured
 #
 # or
 #
@@ -29,6 +29,7 @@ permit_params :title, :body, :order, :is_published, :section_id, :menu_display
       f.input :body, :as => :html_editor, :label => 'Body'
       f.input :order, :label => 'Order'
       f.input :is_published, :label => 'Published'
+      f.input :featured, :label => 'Featured'
       f.input :menu_display, :lable => 'Display In Menu'
       f.actions
     end
